@@ -1,14 +1,30 @@
-import React from 'react'
-import MainsideBar from './MainsideBar'
+import React from 'react';
+import {
+  MDBCard,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardOverlay,
+  MDBCardImage
+} from 'mdb-react-ui-kit';
+import MainsideBar from './MainsideBar';
 
-function Home() {
+export default function Home() {
   return (
-    <div>
-        <MainsideBar/>
-        <h1>my Home</h1>
-      
+    <>
+    <div className='flex'>
+      <MainsideBar/>
+    <MDBCard background='dark' className='text-white w-96' >
+      <MDBCardImage overlay src='https://mdbootstrap.com/img/new/slides/017.webp' alt='...' />
+      <MDBCardOverlay>
+        <MDBCardTitle>Card title</MDBCardTitle>
+        <MDBCardText>
+          This is a wider card with supporting text below as a natural lead-in to additional content. This
+          content is a little bit longer.
+        </MDBCardText>
+        <MDBCardText>Last updated 3 mins ago</MDBCardText>
+      </MDBCardOverlay>
+    </MDBCard>
     </div>
-  )
+    </>
+  );
 }
-
-export default Home
